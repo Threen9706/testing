@@ -7,12 +7,10 @@ var dbutil = new mongoUtil("localhost", "27017", "jd_vue_3x");
 
 /* GET login page. */
 router.post('/', function (req, res, next) {
-    //   res.render('index', { title: 'Express' });
+  
     console.log(req.body);
     var { username, password } = req.body;
-    // var username = req.body.username;
-    // var pwd = req.body.password;
-    // console.log(password);
+
     dbutil.find({ username: username }, {}, 'users', (err, data) => {
         if (err) {
             console.log(err)

@@ -9,7 +9,6 @@ router.get('/banner', function(req, res, next) {
     if(err){
       console.log(err);
     }else{
-      // console.log(result);
       res.send(result);
     }
   })
@@ -20,7 +19,6 @@ router.get('/list', function(req, res, next) {
     if(err){
       console.log(err);
     }else{
-      // console.log(result);
       res.send(result);
     }
   })
